@@ -6,6 +6,7 @@ import Process from "@/components/Process";
 import Map from "@/components/Map";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import FocusesSection from "@/components/FocusesSection";
 
 
 const Index = () => {
@@ -15,7 +16,8 @@ const Index = () => {
       <main>
         <Hero />
         <About />
-        <Industries />
+        {/* <Industries /> */}
+        <FocusesSection/>
         <Process />
         <Map />
         <ContactForm />

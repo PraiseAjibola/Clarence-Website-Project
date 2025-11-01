@@ -22,7 +22,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact px-4 md:px-[8rem] py-20" id="contact">
+    <section className="contact px-4 py-20" id="contact">
       <div className="contact-header mb-12">
         <h2 className="font-raleway font-semibold text-[24px] md:text-[32px] text-center">
           Send us a message at{" "}

@@ -67,8 +67,8 @@ const Header = () => {
 
       <div
         id="navContainer"
-        className={`nav-container fixed top-[50px] w-[664px] max-w-[90%] bg-background border-l border-b border-border p-[60px_80px] transition-all duration-[1.3s] ease-in-out z-[1000] ${
-          isMenuOpen ? "right-0 md:right-[60%]" : "-right-full"
+        className={`nav-container fixed top-[50px] w-[664px] max-w-[90%] bg-background border-l border-b border-border p-[60px_80px] transition-all duration-1000 ease-in-out z-[1000] ${
+          isMenuOpen ? "right-0 lg:right-[30%] xl:right-[50%]" : "-right-full"
         }`}
         style={{
           boxShadow: "0 3px 6px rgba(var(--glow-rgb), 0.534)",
@@ -89,7 +89,7 @@ const Header = () => {
           Pages
         </h2>
 
-        <nav className="nav-grid grid grid-cols-2 gap-[30px]">
+        <nav className="nav-grid grid grid-cols-1 md:grid-cols-2 gap-[30px]">
           <Link
             to="/"
             className="nav-link text-foreground no-underline text-[23px] font-light transition-opacity duration-300 hover:opacity-60"

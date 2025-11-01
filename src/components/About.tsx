@@ -57,7 +57,7 @@ const StatItem = ({ target, label, hasM }: StatItemProps) => {
 
   return (
     <div ref={ref} className="stat-item text-left">
-      <div className="stat-number font-raleway font-semibold text-[80px] leading-[100%] tracking-normal transition-all duration-400 opacity-100">
+      <div className="stat-number font-raleway font-semibold text-5xl lg:text-[80px] leading-[100%] tracking-normal transition-all duration-400 opacity-100">
         {count}
         {hasM && "M"}
         <span className="plus text-accent font-raleway font-semibold text-[60px] leading-[100%] tracking-normal">

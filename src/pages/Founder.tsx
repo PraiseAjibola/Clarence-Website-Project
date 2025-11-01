@@ -8,7 +8,7 @@ const Founder = () => {
       <main className="py-20">
         {/* Hero Section - Full Width with Overlay Text */}
         <div className="px-4 md:px-[8rem] mb-24">
-          <div className="relative bg-gradient-to-br from-accent/5 to-transparent rounded-3xl overflow-hidden p-12 md:p-20">
+          <div className="relative bg-gradient-to-br from-accent/5 to-transparent rounded-3xl z-[-1] overflow-hidden p-12 md:p-20">
             <div className="max-w-[800px]">
               <div className="inline-block px-4 py-1 bg-accent/30 rounded-full mb-6">
                 <span className="text-accent font-raleway text-[12px] font-semibold uppercase tracking-wider">

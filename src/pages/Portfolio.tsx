@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Industries from "@/components/Industries";
+// import Industries from "@/components/Industries";
+import Focuses from "@/components/FocusesSection";
 
 const Portfolio = () => {
   return (
@@ -48,7 +49,7 @@ const Portfolio = () => {
         </div>
 
         {/* Industries Section */}
-        <Industries />
+        <Focuses/>
 
         {/* Call to Action Section */}
         <div className="px-4 md:px-[8rem] mt-24">

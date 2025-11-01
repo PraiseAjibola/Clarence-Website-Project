@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="hero min-h-[75vh] flex flex-col items-center px-8 pt-12 pb-16 text-center relative">
+    <section className="hero min-h-[75vh] flex flex-col items-center px-8 pt-12 pb-16 text-center relative z-[-2]">
       <h1 className="mb-8 max-w-[840px] font-raleway font-bold text-[40px] md:text-[60px] leading-[1.2] tracking-normal">
         Investing in ideas that shape the future
       </h1>
