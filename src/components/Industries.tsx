@@ -1,4 +1,5 @@
 import IndustryCard from "./IndustryCard";
+import  PortfolioSection from "./IndustryCard2"
 
 const Industries = () => {
   const topCards = [
@@ -101,7 +102,7 @@ const Industries = () => {
         Industries We Invest In
       </h2>
       <div className="cards-container flex flex-col items-center gap-8 max-w-[1200px] mx-auto">
-        <div className="top-cards flex flex-wrap justify-center gap-6 w-full">
+        {/* <div className="top-cards flex flex-wrap justify-center gap-6 w-full">
           {topCards.map((card, index) => (
             <IndustryCard key={index} {...card} />
           ))}
@@ -110,7 +111,9 @@ const Industries = () => {
           {bottomCards.map((card, index) => (
             <IndustryCard key={index} {...card} />
           ))}
-        </div>
+        </div> */}
+
+        <PortfolioSection/>
       </div>
     </section>
   );
