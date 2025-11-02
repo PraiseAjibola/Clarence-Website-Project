@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
         </Link>
       </div>
-      <div className="sm:hidden md:flex decorative-shape absolute top-[22rem] right-[30%] w-[30vw] max-[1024px]:right-[25%] max-w-[450px] h-auto opacity-50 -z-10">
+      <div className="hidden md:flex decorative-shape absolute top-[22rem] right-[30%] w-[30vw] max-[1024px]:right-[25%] max-w-[450px] h-auto opacity-50 -z-10">
         <img src="/Images/HeroSectionImage.png" alt="" className="w-full h-full" />
       </div>
     </section>
