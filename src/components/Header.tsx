@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const Header = () => {
+interface HeaderProps {
+  variant?: "transparent" | "default";
+}
+
+const Header = ({ variant = "default" }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -49,7 +53,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="flex justify-between items-center px-4 md:px-[8%] py-8 w-full z-[100] bg-background backdrop-blur-[10px]">
+    <header className={`flex justify-between items-center px-4 md:px-[8%] w-full z-[100] ${variant === "transparent" ? "bg-transparent" : "bg-background py-8 backdrop-blur-[10px]"}`}>
       <Link to="/" className="logo">
         <img
           src="/Images/Logo.png"

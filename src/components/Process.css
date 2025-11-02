@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Messina+Sans:wght@400;500;600&display=swap");
+
+/* CSS Variables */
+:root {
+  --snap-offset: 1.8rem;
+}
+
+/* Section Styles */
+#processSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 8rem;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+}
+
+/* Process Grid */
+.process {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8rem;
+  align-items: start;
+  width: 100%;
+}
+
+/* Process Content - Left Side (No changes) */
+.process-content {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  gap: 9px;
+  font-size: 19px;
+  margin: 0 0 3% 0;
+  align-items: center;
+}
+.process-content img {
+  height: 20px;
+}
+.process-content h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.section-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Process Container - Right Side (No changes) */
+.process-container {
+  position: relative;
+  height: 120vh;
+  padding-bottom: 40vh;
+}
+
+/* === 👇 KEY CHANGES ARE HERE 👇 === */
+
+.process-step {
+  /* 1. Make ALL cards sticky */
+  position: sticky;
+  top: var(--snap-offset);
+
+  /* 2. Set base opacity for the fade-in */
+  opacity: 0; 
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: calc(var(--snap-offset) - 1rem) 4rem 2rem;
+  background: #000;
+  box-sizing: border-box;
+  width: 600px;
+  max-width: 100%;
+  height: 60vh;
+
+  /* 3. Removed 'transform' from will-change and transition */
+  will-change: opacity;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Visibility transition (from your observer) */
+.process-step.visible {
+  opacity: 1;
+}
+
+/* ⛔️ Removed .active and .past rules */
+
+
+/* 4. This is your stacking logic - it was already perfect! */
+.process-step:nth-child(1) {
+  z-index: 1;
+  /* 5. Removed 'position: sticky' and 'top' from here */
+  border-top: none; 
+}
+
+.process-step:nth-child(2) {
+  z-index: 2; /* Will stack ON TOP of card 1 */
+  /* ⛔️ Removed commented-out margin */
+}
+
+.process-step:nth-child(3) {
+  z-index: 3; /* Will stack ON TOP of card 2 */
+  /* ⛔️ Removed commented-out margin */
+}
+
+/* === 👆 END OF KEY CHANGES 👆 === */
+
+
+/* Step Number (No changes) */
+.step-number {
+  font-size: 1.75rem;
+  color: #4ecdc4;
+  font-weight: 800;
+  margin: 0 0 0.75rem 0;
+  line-height: 1;
+  position: relative;
+  z-index: 20;
+}
+
+/* Step Title (No changes) */
+.process-step h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 58px;
+  letter-spacing: 0%;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+/* Step Paragraphs (No changes) */
+.process-step p {
+  font-family: "Messina Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0%;
+  margin: 0;
+}
+.process-step p:last-of-type {
+  margin-top: 1rem;
+}
+
+/* Step Border (top separator) (No changes) */
+.process-step::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  border-top: 1px solid rgba(255, 255, 255, 0.356);
+  pointer-events: none;
+}
+.process-step:first-child::after {
+  display: none;
+}
+
+/* Spacer (No changes) */
+.spacer-bottom {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* All responsive rules are fine, but we need to override
+   the sticky behavior on mobile, where stacking isn't ideal. */
+
+/* ... (Your Tablet @media query is fine) ... */
+@media (max-width: 1024px) {
+  #processSection {
+    padding: 4rem 3rem;
+  }
+  .process {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .process-step {
+    width: 100%;
+    padding: 2rem;
+  }
+  .section-title {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  #processSection {
+    padding: 3rem 1.5rem;
+  }
+  .process {
+    gap: 2rem;
+  }
+  .process-content {
+    gap: 0.5rem;
+    font-size: 16px;
+  }
+  .process-content img {
+    width: 20px;
+    height: auto;
+  }
+  .process-content h3 {
+    font-size: 18px;
+  }
+  .section-title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .process-container {
+    /* Disable the fixed height on mobile */
+    height: auto; 
+    padding-bottom: 0;
+  }
+
+  .process-step {
+    padding: 1.5rem;
+    text-align: left;
+    
+    /* 6. Disable sticky positioning on mobile */
+    position: relative; /* Overrides 'sticky' */
+    top: auto; /* Overrides '--snap-offset' */
+    height: auto; /* Let content define height */
+    margin-bottom: 2rem; /* Add space between cards */
+  }
+
+  /* Make sure all cards are visible on mobile */
+  .process-step.visible {
+    opacity: 1;
+  }
+
+  .process-step h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    padding-bottom: 8px;
+  }
+  .process-step p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .step-number {
+    font-size: 1.5rem;
+  }
+  .spacer-bottom {
+    height: 10vh;
+  }
+}
+
+/* ... (Your Small Mobile @media query is fine) ... */
+@media (max-width: 480px) {
+  #processSection {
+    padding: 2rem 1rem;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .process-step {
+    padding: 1rem;
+  }
+  .process-step h3 {
+    font-size: 20px;
+  }
+  .process-step p {
+    font-size: 15px;
+  }
+}
