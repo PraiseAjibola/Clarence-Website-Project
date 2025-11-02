@@ -54,7 +54,7 @@ const cardData: ICardData[] = [
     iconUrl: "/Images/coin.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer2",
-    containerStyle: { right: "10rem" },
+    containerStyle: { left: "-10rem" },
     detailItems: [
       {
         title: "Turboserv Insurance Limited",
@@ -72,7 +72,7 @@ const cardData: ICardData[] = [
     iconUrl: "/Images/lamp-on.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer3",
-    containerStyle: { right: "46.5rem" },
+    containerStyle: { right: "47rem" },
     detailItems: [
       {
         title: "Dealo Global Services Limited",
@@ -113,7 +113,7 @@ const cardData: ICardData[] = [
     iconUrl: "/Images/building-4 copy.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer5",
-    containerStyle: { right: "34.5rem" },
+    containerStyle: { right: "35rem" },
     detailItems: [
       {
         title: "Dealo Global Services Limited",

@@ -1,127 +1,132 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import React from 'react';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
-const Founder = () => {
+const Founder: React.FC = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="py-20">
-        {/* Hero Section - Full Width with Overlay Text */}
-        <div className="px-4 md:px-[8rem] mb-24">
-          <div className="relative bg-gradient-to-br from-accent/5 to-transparent rounded-3xl z-[-1] overflow-hidden p-12 md:p-20">
-            <div className="max-w-[800px]">
-              <div className="inline-block px-4 py-1 bg-accent/30 rounded-full mb-6">
-                <span className="text-accent font-raleway text-[12px] font-semibold uppercase tracking-wider">
-                  Leadership
-                </span>
-              </div>
-              <h1 className="font-jacques text-[48px] md:text-[64px] leading-[1.1] mb-6">
-                Meet Our Founder
-              </h1>
-              <p className="text-[19px] md:text-[22px] leading-[1.7] text-muted-foreground">
-                Decades of strategic vision, transforming Africa's investment landscape through
-                sustainable enterprise development.
-              </p>
-            </div>
+    <div className="bg-black text-white font-['Raleway'] overflow-x-hidden">
+      {/* Header */}
+      {/* <header className="flex justify-between items-center py-8 px-[8%] bg-black">
+        <div className="logo">
+          <img src="./Images/Logo.png" alt="Clarence Gate Logo" className="h-[90px] w-auto" />
+        </div>
+        <nav className="hidden md:flex gap-8">
+          <a href="index.html" className="text-white hover:text-[#4ecdc4] transition-colors">Home</a>
+          <a href="about.html" className="text-white hover:text-[#4ecdc4] transition-colors">About Us</a>
+          <a href="portfolio.html" className="text-white hover:text-[#4ecdc4] transition-colors">Portfolio</a>
+          <a href="founder.html" className="text-white hover:text-[#4ecdc4] transition-colors">Our Founder</a>
+          <a href="contact.html" className="text-white hover:text-[#4ecdc4] transition-colors">Contact</a>
+        </nav>
+      </header> */}
+      <Header/>
+
+      {/* Founder Hero */}
+      <section className="grid md:grid-cols-2 gap-20 items-center py-32 px-[8%]">
+        <div className="w-full h-[600px] bg-gradient-to-br from-[#4ecdc4] to-[#0a4d3c] rounded-xl flex items-center justify-center text-[80px] shadow-[0_20px_60px_rgba(78,205,196,0.3)]">
+          👤
+        </div>
+        <div>
+          <h1 className="text-[60px] font-bold leading-[1.2] mb-4">John Clarence</h1>
+          <p className="text-[#4ecdc4] text-2xl font-semibold mb-8">Founder & Chief Executive Officer</p>
+          <p className="text-lg leading-8 text-white/85 mb-6">
+            A visionary entrepreneur and strategic investor with over 15 years of experience building sustainable enterprises across Africa. John founded Clarence Gate with a mission to transform bold ideas into lasting impact.
+          </p>
+          <p className="text-lg leading-8 text-white/85">
+            His leadership philosophy centers on patient capital, strategic foresight, and building businesses that create value for all stakeholders.
+          </p>
+          <div className="flex gap-6 mt-8">
+            <a href="#" aria-label="LinkedIn" className="w-[50px] h-[50px] flex items-center justify-center border border-white/30 rounded-full text-2xl hover:bg-[#4ecdc4] hover:text-black hover:border-[#4ecdc4] transition-transform duration-300 hover:-translate-y-1">in</a>
+            <a href="#" aria-label="Twitter" className="w-[50px] h-[50px] flex items-center justify-center border border-white/30 rounded-full text-2xl hover:bg-[#4ecdc4] hover:text-black hover:border-[#4ecdc4] transition-transform duration-300 hover:-translate-y-1">𝕏</a>
           </div>
         </div>
+      </section>
 
-        {/* Main Content - Asymmetric Layout */}
-        <div className="px-4 md:px-[8rem] mb-24">
-          <div className="grid md:grid-cols-5 gap-12 max-w-[1200px] mx-auto">
-            <div className="md:col-span-2">
-              <div className="sticky top-8">
-                <div className="founder-image bg-card rounded-2xl overflow-hidden aspect-[3/4] flex items-center justify-center border border-border">
-                  <div className="text-center text-muted-foreground">
-                    <p className="text-[18px]">Founder Image</p>
-                  </div>
-                </div>
-                <div className="mt-6 space-y-3">
-                  <h3 className="font-raleway font-semibold text-[22px]">Key Achievements</h3>
-                  <div className="space-y-2 text-[15px] text-muted-foreground">
-                    <p>• 10+ Years Investment Experience</p>
-                    <p>• 6 Active Sector Portfolios</p>
-                    <p>• 15+ Strategic Partnerships</p>
-                    <p>• Pan-African Market Expertise</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="md:col-span-3 space-y-12">
-              <div>
-                <h2 className="font-jacques text-[38px] md:text-[46px] leading-[1.2] mb-6">
-                  Leadership Vision
-                </h2>
-                <div className="space-y-6 text-[17px] md:text-[19px] leading-[1.8] text-muted-foreground">
-                  <p>
-                    Our founder brings decades of experience in strategic investments and business
-                    development across emerging markets, with a particular focus on Africa's evolving
-                    economic landscape.
-                  </p>
-                  <p>
-                    Driven by a vision to transform investments into sustainable enterprises, our
-                    leadership has built a reputation for identifying opportunities that create lasting
-                    impact while generating substantial returns.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-card rounded-2xl p-8 border border-border">
-                <h3 className="font-raleway font-semibold text-[26px] mb-6">The Journey</h3>
-                <div className="space-y-6 text-[16px] md:text-[18px] leading-[1.8] text-muted-foreground">
-                  <p>
-                    Founded on the principle that strategic capital, combined with operational
-                    expertise, can unlock transformative value, Clarence Gate Group represents years of
-                    dedication to building sustainable businesses across Africa.
-                  </p>
-                  <p>
-                    Through careful selection of industries and opportunities, we've established a
-                    portfolio that addresses critical market needs while maintaining our commitment to
-                    sustainable growth and community impact.
-                  </p>
-                  <p>
-                    Our approach is grounded in deep market knowledge, rigorous analysis, and a
-                    long-term perspective that prioritizes enduring value over short-term gains.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl p-6">
-                  <h4 className="font-raleway font-semibold text-[20px] mb-3 text-accent">
-                    Investment Philosophy
-                  </h4>
-                  <p className="text-[15px] leading-[1.7] text-muted-foreground">
-                    Long-term value creation through strategic capital deployment and operational excellence.
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl p-6">
-                  <h4 className="font-raleway font-semibold text-[20px] mb-3 text-accent">
-                    Market Focus
-                  </h4>
-                  <p className="text-[15px] leading-[1.7] text-muted-foreground">
-                    Africa's emerging sectors with high growth potential and sustainable impact opportunities.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Biography */}
+      <section className="py-20 px-[8%] border-t border-[#333]">
+        <h2 className="text-[50px] font-semibold text-center mb-12">Biography</h2>
+        <div className="max-w-[1000px] mx-auto space-y-8 text-lg leading-8 text-white/85">
+          <p>John Clarence's journey in investment and entrepreneurship began with a simple observation: Africa's greatest opportunities often go unrealized due to a lack of patient, strategic capital. This insight would become the foundation of Clarence Gate Group.</p>
+          <p>Before founding Clarence Gate, John gained extensive experience in financial services, real estate development, and strategic consulting across West Africa. He witnessed firsthand how the right combination of capital, expertise, and vision could transform promising ventures into industry leaders.</p>
+          <p>Under his leadership, Clarence Gate has grown into a diversified investment holding company with interests spanning real estate, energy, finance, hospitality, technology, and consulting. The portfolio reflects John's belief in building enterprises that address real market needs while generating sustainable returns.</p>
+          <p>John holds an MBA from Lagos Business School and a Bachelor's degree in Economics. He serves on several corporate boards and is a frequent speaker on entrepreneurship, investment strategy, and Africa's economic development.</p>
         </div>
+      </section>
 
-        {/* Quote Section */}
-        <div className="px-4 md:px-[8rem]">
-          <div className="max-w-[900px] mx-auto text-center py-16">
-            <div className="text-accent text-[48px] mb-6">"</div>
-            <blockquote className="font-jacques text-[28px] md:text-[36px] leading-[1.4] mb-8">
-              Strategic capital, combined with operational expertise, unlocks transformative
-              value across Africa's most promising sectors.
-            </blockquote>
-            <p className="text-[16px] text-muted-foreground">— Founder, Clarence Gate Group</p>
-          </div>
+      {/* Professional Journey */}
+      <section className="py-20 px-[8%] border-t border-[#333]">
+  <h2 className="text-[50px] font-semibold text-center mb-16">Professional Journey</h2>
+
+  <div className="relative max-w-[1000px] mx-auto 
+      before:content-[''] 
+      before:hidden 
+      md:before:block 
+      before:absolute 
+      before:left-1/2 
+      before:top-0 
+      before:bottom-0 
+      before:w-[2px] 
+      before:bg-gradient-to-b 
+      before:from-[#4ecdc4] 
+      before:to-transparent 
+      before:-translate-x-1/2">
+      
+    {[
+      { year: '2008', title: 'Early Career', desc: 'Began career in investment banking, gaining deep insights into capital markets and corporate finance across multiple sectors.' },
+      { year: '2012', title: 'First Venture', desc: 'Co-founded first real estate development company, successfully delivering multiple residential and commercial projects.' },
+      { year: '2015', title: 'Founded Clarence Gate', desc: 'Established Clarence Gate Group with a vision to build a diversified portfolio of sustainable African enterprises.' },
+      { year: '2018', title: 'Portfolio Expansion', desc: 'Expanded investments into energy, hospitality, and technology sectors, building a truly diversified holding company.' },
+      { year: '2024', title: 'Present Day', desc: 'Leading Clarence Gate Group with 10+ portfolio companies and over $50M in capital investments across five key sectors.' },
+    ].map((item, i) => (
+      <div key={i} className={`grid md:grid-cols-2 gap-16 mb-16 ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
+        <div className={`text-[40px] font-bold text-[#4ecdc4] ${i % 2 === 1 ? 'md:text-right' : ''}`}>{item.year}</div>
+        <div className="p-8 bg-[#1a1a1a] border border-white/10 rounded-xl hover:bg-[#0a4d3c] hover:border-[#4ecdc4] hover:-translate-y-1 transition-transform">
+          <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+          <p className="text-white/70 leading-relaxed">{item.desc}</p>
         </div>
-      </main>
-      <Footer />
+      </div>
+    ))}
+  </div>
+</section>
+
+
+      {/* Leadership Philosophy */}
+      <section className="py-20 px-[8%] border-t border-[#333]">
+        <h2 className="text-[50px] font-semibold text-center mb-16">Leadership Philosophy</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { icon: '🎯', title: 'Long-Term Vision', desc: 'Success is measured not in quarters, but in decades. We build enterprises designed to thrive for generations.' },
+            { icon: '🤝', title: 'Partnership Approach', desc: 'We don\'t just invest capital—we invest time, expertise, and strategic guidance to help our portfolio companies succeed.' },
+            { icon: '💡', title: 'Continuous Learning', desc: 'Markets evolve, industries transform. Staying ahead requires constant learning and adaptation to new realities.' },
+            { icon: '🌍', title: 'Impact-Driven', desc: 'True success creates value for all stakeholders—investors, employees, customers, and communities.' },
+            { icon: '⚖️', title: 'Disciplined Decision-Making', desc: 'Every investment must meet rigorous criteria for market potential, scalability, and alignment with our values.' },
+            { icon: '🚀', title: 'Bold Execution', desc: 'Strategy without execution is just planning. We move decisively once opportunities are validated.' },
+          ].map((card, i) => (
+            <div key={i} className="p-10 rounded-xl bg-gradient-to-br from-[#4ecdc40d] to-black/30 border border-[#4ecdc433] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(78,205,196,0.2)] transition-transform">
+              <div className="text-[50px] mb-6">{card.icon}</div>
+              <h3 className="text-2xl font-semibold text-[#4ecdc4] mb-4">{card.title}</h3>
+              <p className="text-white/70 leading-relaxed">{card.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Quote Section */}
+      {/* Quote Section */}
+<section className="py-20 px-[8%] border-t border-[#333] text-center">
+  <div className="max-w-[900px] mx-auto relative">
+    <p className="text-[32px] italic text-[#4ecdc4] font-light leading-snug mb-6 relative before:text-[80px] before:absolute before:top-[-20px] before:left-[-40px] before:opacity-30">
+      The greatest investments are those that transform not just balance sheets, but lives, communities, and futures.
+    </p>
+    <p className="text-xl font-semibold">— John Clarence</p>
+  </div>
+</section>
+
+{/* Footer */}
+{/* <footer className="border-t border-[#333] py-12 px-[8%] text-center text-white/60">
+  <p>&copy; 2024 Clarence Gate Group. All rights reserved.</p>
+</footer> */}
+<Footer/>
+
     </div>
   );
 };

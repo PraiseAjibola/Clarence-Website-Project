@@ -7,20 +7,19 @@ import Map from "@/components/Map";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import FocusesSection from "@/components/FocusesSection";
-import Process from '@/components/ProcessSection'
-
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
+        <div className="lg:h-[600px] md:h-[500px]">
+          <Hero />
+        </div>
         <About />
         {/* <Industries /> */}
-        <FocusesSection/>
-        {/* <Process /> */}
-        <Process/>
+        <FocusesSection />
+        <Process />
         <Map />
         <ContactForm />
       </main>

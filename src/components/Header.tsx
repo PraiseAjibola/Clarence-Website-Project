@@ -51,12 +51,16 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center px-4 md:px-[8%] py-8 w-full z-[100] bg-background backdrop-blur-[10px]">
       <Link to="/" className="logo">
-        <img src="/Images/Logo.png" alt="Clarence Gate Group Logo" className="h-[90px] w-auto" />
+        <img
+          src="/Images/Logo.png"
+          alt="Clarence Gate Group Logo"
+          className="lg:h-[90px] h-[80px] w-auto"
+        />
       </Link>
 
       <div
         id="hamburger"
-        className={`hamburger w-[30px] h-[24px] relative cursor-pointer flex flex-col justify-between z-[1100] transition-opacity duration-400 ${
+        className={`hamburger w-[30px] h-[23px] items-center lg:h-[24px] relative cursor-pointer flex flex-col justify-between z-[1100] transition-opacity duration-400 ${
           isMenuOpen ? "opacity-0 pointer-events-none" : ""
         }`}
         onClick={toggleMenu}
@@ -68,7 +72,7 @@ const Header = () => {
       <div
         id="navContainer"
         className={`nav-container fixed top-[50px] w-[664px] max-w-[90%] bg-background border-l border-b border-border p-[60px_80px] transition-all duration-1000 ease-in-out z-[1000] ${
-          isMenuOpen ? "right-0 lg:right-[30%] xl:right-[50%]" : "-right-full"
+          isMenuOpen ? "right-8 lg:right-[30%] xl:right-[50%]" : "-right-full"
         }`}
         style={{
           boxShadow: "0 3px 6px rgba(var(--glow-rgb), 0.534)",
@@ -90,41 +94,27 @@ const Header = () => {
         </h2>
 
         <nav className="nav-grid grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-          <Link
-            to="/"
-            className="nav-link text-foreground no-underline text-[23px] font-light transition-opacity duration-300 hover:opacity-60"
-            onClick={closeMenu}
-          >
-            Home
-          </Link>
-          <Link
-            to="/portfolio"
-            className="nav-link text-foreground no-underline text-[23px] font-light transition-opacity duration-300 hover:opacity-60"
-            onClick={closeMenu}
-          >
-            Our Investment Portfolio
-          </Link>
-          <Link
-            to="/about"
-            className="nav-link text-foreground no-underline text-[23px] font-light transition-opacity duration-300 hover:opacity-60"
-            onClick={closeMenu}
-          >
-            About Us
-          </Link>
-          <Link
-            to="/founder"
-            className="nav-link text-foreground no-underline text-[23px] font-light transition-opacity duration-300 hover:opacity-60"
-            onClick={closeMenu}
-          >
-            Our Founder
-          </Link>
-          <Link
-            to="/contact"
-            className="nav-link text-foreground no-underline text-[23px] font-light transition-opacity duration-300 hover:opacity-60"
-            onClick={closeMenu}
-          >
-            Contact Us
-          </Link>
+          {[
+            { path: "/", label: "Home" },
+            { path: "/portfolio", label: "Our Investment Portfolio" },
+            { path: "/about", label: "About Us" },
+            { path: "/founder", label: "Our Founder" },
+            { path: "/contact", label: "Contact Us" },
+          ].map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={closeMenu}
+              className={`relative text-foreground no-underline text-[23px] font-light transition-all duration-300 hover:opacity-60 pb-2
+        ${
+          location.pathname === item.path
+            ? "after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[50px] after:h-[2px] after:bg-white after:rounded-full"
+            : ""
+        }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
