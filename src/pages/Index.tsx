@@ -2,11 +2,12 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Industries from "@/components/Industries";
-import Process from "@/components/Process";
+// import Process from "@/components/Process";
 import Map from "@/components/Map";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import FocusesSection from "@/components/FocusesSection";
+import Process from '@/components/ProcessSection'
 
 
 const Index = () => {
@@ -18,7 +19,8 @@ const Index = () => {
         <About />
         {/* <Industries /> */}
         <FocusesSection/>
-        <Process />
+        {/* <Process /> */}
+        <Process/>
         <Map />
         <ContactForm />
       </main>
