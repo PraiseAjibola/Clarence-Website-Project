@@ -199,7 +199,7 @@ const Focuses: React.FC = () => {
         <img src="/Images/Vector 2.png" alt="" />
         <h4>Focuses</h4>
       </div>
-      <h2 className="section-title">Industries We Invest In</h2>
+      <h2 className="section-title">Industries We Invest I</h2>
       <div className="cards-container">
         <div className="top-cards">{topCards.map(renderCard)}</div>
         <div className="bottom-row">{bottomCards.map(renderCard)}</div>

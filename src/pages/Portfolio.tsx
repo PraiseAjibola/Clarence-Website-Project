@@ -123,7 +123,7 @@ const Portfolio: React.FC = () => {
       <Header/>
 
       {/* Hero Section */}
-      <section className="text-center px-[8%] pt-32 pb-16">
+      <section className="text-center px-[8%]  pb-16">
         <h1 className="text-[60px] font-bold leading-tight mb-6 md:text-[57px]">Our Investment Portfolio</h1>
         <p className="text-[21px] text-white/80 max-w-3xl mx-auto mb-12 md:text-[18px]">
           A diversified collection of exceptional businesses driving growth and innovation across Africa's most promising sectors.
