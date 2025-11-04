@@ -8,6 +8,7 @@ interface IDetailItem {
   imageUrl: string;
   imageAlt: string;
   imageClass?: string;
+  link?: string;
 }
 
 interface ICardData {
@@ -19,6 +20,7 @@ interface ICardData {
   detailItems: IDetailItem[];
   containerId: string;
   containerStyle: React.CSSProperties;
+  link?: string; // 👈 Added for the "Learn more" button
 }
 
 // --- Component Data ---
@@ -26,17 +28,20 @@ const cardData: ICardData[] = [
   {
     index: 0,
     title: "Real Estate",
-    description: "We are passionate about creating sustainable developments that redefine modern living and urban infrastructure.",
+    description:
+      "We are passionate about creating sustainable developments that redefine modern living and urban infrastructure.",
     iconUrl: "/Images/building-4 copy.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer1",
     containerStyle: { left: 0 },
+    link: "/clarence-gate", // 👈 link for Learn more
     detailItems: [
       {
         title: "Dealo Global Services Limited",
         year: "2022",
         imageUrl: "/Images/Clarence Gate Logo.png",
         imageAlt: "Clarence Gate Logo",
+        link: "/dealo-global",
       },
       {
         title: "Dealo Energy Limited",
@@ -44,41 +49,49 @@ const cardData: ICardData[] = [
         imageUrl: "/Images/Card2.jpg",
         imageAlt: "Dealo Energy",
         imageClass: "ligt",
+        link: "/dealo-energy",
       },
     ],
   },
   {
     index: 1,
     title: "Finance & Insurance",
-    description: "Empowering financial systems and providing innovative risk solutions.",
+    description:
+      "Empowering financial systems and providing innovative risk solutions.",
     iconUrl: "/Images/coin.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer2",
     containerStyle: { left: "-10rem" },
+    link: "/turboserv", // 👈 link for Learn more
     detailItems: [
       {
         title: "Turboserv Insurance Limited",
         year: "2022",
-        imageUrl: "/Images/TURBOSERV_LOGO_4x-100-removebg-preview.png",
+        imageUrl:
+          "/Images/TURBOSERV_LOGO_4x-100-removebg-preview.png",
         imageAlt: "Turboserv Logo",
         imageClass: "teal",
+        link: "/turboserv",
       },
     ],
   },
   {
     index: 2,
     title: "Hospitality",
-    description: "Building brands that deliver exceptional guest experiences across Africa's destinations.",
+    description:
+      "Building brands that deliver exceptional guest experiences across Africa's destinations.",
     iconUrl: "/Images/lamp-on.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer3",
     containerStyle: { right: "47rem" },
+    link: "/dealo-global", // 👈 link for Learn more
     detailItems: [
       {
         title: "Dealo Global Services Limited",
         year: "2022",
         imageUrl: "/Images/Card4.jpg",
         imageAlt: "Hospitality 1",
+        link: "/dealo-global",
       },
       {
         title: "Dealo Energy Limited",
@@ -86,40 +99,47 @@ const cardData: ICardData[] = [
         imageUrl: "/Images/Card5.jpg",
         imageAlt: "Hospitality 2",
         imageClass: "ligt",
+        link: "/dealo-energy",
       },
     ],
   },
   {
     index: 3,
     title: "Technology",
-    description: "Innovating digital solutions that transform businesses and empower communities.",
+    description:
+      "Innovating digital solutions that transform businesses and empower communities.",
     iconUrl: "/Images/diagram.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer4",
     containerStyle: { left: "2rem" },
+    link: "/20b-limited", // 👈 link for Learn more
     detailItems: [
       {
         title: "20B Limited",
         year: "2022",
         imageUrl: "/Images/Card8.jpg",
         imageAlt: "Technology 1",
+        link: "/dealo-global",
       },
     ],
   },
   {
     index: 4,
     title: "Consulting",
-    description: "Strategic advisory services that drive growth and operational excellence.",
+    description:
+      "Strategic advisory services that drive growth and operational excellence.",
     iconUrl: "/Images/building-4 copy.png",
     arrowUrl: "/Images/arrow-right.png",
     containerId: "detailCardContainer5",
     containerStyle: { right: "35rem" },
+    link: "/dealo-global", // 👈 link for Learn more
     detailItems: [
       {
         title: "Dealo Global Services Limited",
         year: "2022",
         imageUrl: "/Images/Card7.jpg",
         imageAlt: "Consulting 1",
+        link: "/dealo-global",
       },
       {
         title: "Dealo Energy Limited",
@@ -127,6 +147,7 @@ const cardData: ICardData[] = [
         imageUrl: "/Images/Card9.jpg",
         imageAlt: "Consulting 2",
         imageClass: "ligt",
+        link: "/dealo-global",
       },
     ],
   },
@@ -159,7 +180,9 @@ const Focuses: React.FC = () => {
         </div>
         <h2 className="card-title">{card.title}</h2>
         <p className="card-description">{card.description}</p>
-        <a href="#" className="card-link">
+
+        {/* 👇 Each card’s “Learn more” link */}
+        <a href={card.link || "#"} className="card-link">
           Learn more
         </a>
       </div>
@@ -173,9 +196,17 @@ const Focuses: React.FC = () => {
           <React.Fragment key={item.title + idx}>
             {idx > 0 && <div className="detail-divider"></div>}
 
-            <div className="detail-card-item">
+            {/* 👇 Each sub-detail card link */}
+            <a
+              href={item.link || "#"}
+              className="detail-card-item"
+              target="_blank" // remove if you want it to open in same tab
+              rel="noopener noreferrer"
+            >
               <div className="detail-image-wrapper">
-                <div className={`image-placeholder ${item.imageClass || ""}`}>
+                <div
+                  className={`image-placeholder ${item.imageClass || ""}`}
+                >
                   <img src={item.imageUrl} alt={item.imageAlt} />
                 </div>
               </div>
@@ -186,7 +217,7 @@ const Focuses: React.FC = () => {
                 </div>
                 <img src={card.arrowUrl} alt="" />
               </div>
-            </div>
+            </a>
           </React.Fragment>
         ))}
       </div>
