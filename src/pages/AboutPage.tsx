@@ -230,7 +230,7 @@ export default function AboutPage() {
               <div className="order-1">
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group">
                   <img
-                    src="/Images/projects1.jpg"
+                    src="/Images/projects5.jpg"
                     alt="Our Vision"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -412,7 +412,7 @@ export default function AboutPage() {
             >
               <div className="flex-1 relative group overflow-hidden rounded-2xl">
                 <img
-                  src="/Images/projects1.jpg"
+                  src="/Images/projects5.jpg"
                   alt="Project 1"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
