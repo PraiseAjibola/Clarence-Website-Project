@@ -71,7 +71,7 @@ const StatItem = ({ target, label, hasM }: StatItemProps) => {
 
 const About = () => {
   return (
-    <section id="about" className="px-4 md:px-[8rem] py-20">
+    <section id="about" className="px-4 md:px-[8rem] lg:pt-[140px] pt-[100px] pb-20">
       <div className="section-header flex items-center gap-4 pb-8">
         <img src="/Images/Vector 2.png" alt="" />
         <h3 className="font-raleway font-semibold text-[20px] leading-[100%] tracking-normal text-center">
@@ -107,5 +107,6 @@ const About = () => {
     </section>
   );
 };
+
 
 export default About;

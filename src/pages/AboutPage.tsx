@@ -1,19 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "lucide-react";
 
 export default function AboutPage() {
-  // const fadeInUp = {
-  //   hidden: { opacity: 0, y: 40 },
-  //   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  // };
-
-  // const fadeIn = {
-  //   hidden: { opacity: 0 },
-  //   show: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
-  // };
-
   const coreValues = [
     {
       icon: "💡",
@@ -46,30 +38,30 @@ export default function AboutPage() {
       text: "We measure success not just in returns, but in the positive change we create in communities across Africa.",
     },
   ];
+
   // Animation Variants
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1], // smoother easing, TS-safe
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
     },
-  },
-};
+  };
 
-const fadeIn = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1],
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
     },
-  },
-};
-
+  };
 
   return (
     <div className="bg-black text-white overflow-x-hidden font-raleway">
@@ -81,57 +73,175 @@ const fadeIn = {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* --- HERO SECTION --- */}
+        {/* --- HERO SECTION WITH ABOUT INTRO --- */}
         <motion.section
-          className="text-center px-[8%] md:pt-32 pt-12 pb-16"
+          className="px-[8%] md:pt-[190px] pt-[160px] pb-16"
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto mb-6">
-            Building Africa's Future Through Strategic Investment
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
-            We are more than an investment firm—we are architects of sustainable
-            growth, committed to transforming bold ideas into enterprises that
-            create lasting value.
-          </p>
+          <div className="max-w-6xl">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8">
+              About Us
+            </h1>
+            <div className="space-y-4 text-white/80 text-base md:text-lg leading-relaxed">
+              <p>
+                Clarence Gate is a diversified investment holding company committed to building enduring businesses across Africa's most dynamic sectors: Real Estate, Finance & Insurance, Hospitality, Trading, and Energy & Infrastructure.
+              </p>
+              <p>
+                With a focus on sustainability, innovation, and long-term value creation, Clarence Gate identifies and develops high-growth opportunities that drive economic progress while delivering measurable impact for stakeholders.
+              </p>
+              <p>
+                Through its investment & subsidiaries, the Group provides a platform for strategic partnerships, operational excellence, and responsible growth, positioning Clarence Gate as a trusted name in enterprise development and investment across the continent.
+              </p>
+              <p>
+                Our brand stands for integrity, foresight, and resilience, the core principles guiding every decision, partnership, and venture within the Clarence Gate ecosystem.
+              </p>
+            </div>
+            <motion.button
+              className="mt-8 flex items-center gap-2 text-white hover:text-teal-300 transition-colors group"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <span className="text-base md:text-lg">Get in Touch</span>
+              <svg 
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </motion.button>
+          </div>
         </motion.section>
 
-        {/* --- MISSION & VISION --- */}
+        {/* --- LARGE IMAGE SECTION --- */}
         <motion.section
-          className="px-[8%] py-20 grid md:grid-cols-2 gap-12 border-t border-gray-700"
+          className="px-[8%] py-12"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <div className="relative overflow-hidden rounded-2xl aspect-[16/9] md:aspect-[21/9] group">
+            <img
+              src="/Images/projects3.jpg"
+              alt="Clarence Gate Building"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+        </motion.section>
+
+        {/* --- STATS SECTION --- */}
+        <motion.section
+          className="px-[8%] py-16"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          {[
-            {
-              title: "Our Mission",
-              text: "To identify, invest in, and nurture exceptional businesses that drive economic growth, create employment opportunities, and deliver sustainable returns.",
-            },
-            {
-              title: "Our Vision",
-              text: "To be Africa's most trusted investment holding company, known for strategic foresight and long-term impact.",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="p-12 rounded-xl border border-teal-300/20 bg-gradient-to-br from-teal-300/5 to-black/40 transition-transform hover:-translate-y-2"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.4 }}
-            >
-              <h2 className="text-4xl font-semibold text-teal-300 mb-6">
-                {item.title}
-              </h2>
-              <p className="text-lg leading-8 text-white/85">{item.text}</p>
-            </motion.div>
-          ))}
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+            {[
+              { num: "10", label: "Companies", suffix: "+" },
+              { num: "10", label: "Years", suffix: "+" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2, duration: 0.6 }}
+              >
+                <div className="flex items-start justify-center mb-2">
+                  <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">
+                    {item.num}
+                  </span>
+                  <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-300 mt-2">
+                    {item.suffix}
+                  </span>
+                </div>
+                <div className="text-white/70 text-lg md:text-xl font-medium">
+                  {item.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
 
-        {/* --- OUR STORY --- */}
+        {/* --- MISSION & VISION WITH IMAGES --- */}
+        <motion.section
+          className="px-[8%] py-20 border-t border-gray-700"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeIn}
+        >
+          <div className="space-y-16">
+            {/* Mission */}
+            <motion.div 
+              className="grid md:grid-cols-2 gap-8 items-center"
+              variants={fadeInUp}
+            >
+              <div className="order-2 md:order-1">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    Our Mission
+                  </h2>
+                </div>
+                <div className="p-6 rounded-lg">
+                  <p className="text-base md:text-lg leading-7 text-white/90">
+                    To identify, invest in, and nurture high-potential enterprises that deliver sustainable value, fostering economic growth, while fostering excellence and integrity across every venture within our portfolio.
+                  </p>
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group">
+                  <img
+                    src="/Images/projects2.jpg"
+                    alt="Our Mission"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Vision */}
+            <motion.div 
+              className="grid md:grid-cols-2 gap-8 items-center"
+              variants={fadeInUp}
+            >
+              <div className="order-2">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    Our Vision
+                  </h2>
+                </div>
+                <p className="text-base md:text-lg leading-7 text-white/90">
+                  To be a leading pan-African investment powerhouse recognized for shaping industries, empowering communities, and driving long-term value and sustainable transformation across generations.
+                </p>
+              </div>
+              <div className="order-1">
+                <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group">
+                  <img
+                    src="/Images/projects1.jpg"
+                    alt="Our Vision"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* --- OUR STORY TIMELINE --- */}
         <motion.section
           className="px-[8%] py-20 border-t border-gray-700"
           variants={fadeInUp}
@@ -139,24 +249,62 @@ const fadeIn = {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold">Our Story</h2>
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                Our Story Behind the Firm
+              </h2>
+            </div>
+            <p className="text-white/70 text-base md:text-lg max-w-3xl">
+              Clarence Gate was founded on a simple yet powerful belief: that Africa's greatest opportunities lie in building sustainable enterprises that address real needs while generating exceptional returns.
+            </p>
           </div>
-          <div className="max-w-4xl mx-auto space-y-8 text-lg leading-8 text-white/85">
-            <p>
-              Clarence Gate was founded on a simple yet powerful belief: that
-              Africa's greatest opportunities lie in building sustainable
-              enterprises that address real needs while generating exceptional
-              returns.
-            </p>
-            <p>
-              Over the years, we've cultivated a diverse portfolio spanning real
-              estate, energy, finance, hospitality, technology, and consulting.
-            </p>
-            <p>
-              Today, Clarence Gate stands as a testament to strategic thinking,
-              patient capital, and the power of building for the long term.
-            </p>
+
+          {/* Timeline Cards - Staggered Layout */}
+          <div className="relative max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {[
+                {
+                  year: "2025",
+                  title: "Expansion & Innovation",
+                  text: "Clarence Gate expands into technology and renewable energy sectors, positioning itself as a forward-thinking investment leader across Africa.",
+                  offset: "lg:mt-16",
+                },
+                {
+                  year: "2024",
+                  title: "Strategic Growth",
+                  text: "Diversified portfolio across finance, hospitality, and consulting. Established strategic partnerships with industry leaders to drive sustainable growth.",
+                  offset: "lg:mt-12 lg:mb-4",
+                },
+                {
+                  year: "2023",
+                  title: "Foundation & Vision",
+                  text: "Founded with a mission to transform Africa's business landscape. Initial investments in real estate and energy sectors laid the groundwork for future expansion.",
+                  offset: "lg:mt-18 lg:mb-8",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className={`bg-gradient-to-br from-teal-900/30 to-teal-950/20 border border-teal-500/30 rounded-2xl p-6 md:p-8 hover:border-teal-400/50 transition-all duration-300 group ${item.offset}`}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15, duration: 0.6 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                >
+                  <h3 className="text-4xl md:text-5xl font-bold text-white mb-4 group-hover:text-teal-300 transition-colors">
+                    {item.year}
+                  </h3>
+                  <h4 className="text-xl md:text-2xl font-semibold text-teal-300 mb-3">
+                    {item.title}
+                  </h4>
+                  <p className="text-white/70 text-sm md:text-base leading-6">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 
@@ -252,7 +400,7 @@ const fadeIn = {
             <h2 className="text-4xl md:text-5xl font-semibold">Our Projects</h2>
             <p className="text-white/70 mt-4 max-w-2xl mx-auto">
               A glimpse into some of the premium residential and commercial
-              properties we’ve developed across Africa.
+              properties we've developed across Africa.
             </p>
           </div>
 
@@ -393,8 +541,114 @@ const fadeIn = {
               </motion.div>
             ))}
           </div>
+          
         </motion.section>
+        
       </motion.div>
+       <section className="bg-black text-white py-20 px-[8%]">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        {/* Section Title */}
+        <motion.h2 
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12"
+          variants={fadeInUp}
+        >
+          Visit Our Office
+        </motion.h2>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left: Image */}
+          <motion.div
+            className="relative group"
+            variants={fadeInUp}
+          >
+            <div className="relative overflow-hidden rounded-2xl border-4 border-teal-500/60">
+              <img
+                src="/Images/projects2.jpg"
+                alt="Office Interior"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            </div>
+          </motion.div>
+
+          {/* Right: Office Details */}
+          <motion.div
+            className="space-y-8"
+            variants={fadeInUp}
+          >
+            {/* Location Title */}
+            <div>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                Lagos, Nigeria
+              </h3>
+              <p className="text-white/70 text-base md:text-lg leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur. Sed molestie odio lectus venenatis porttis nunc donec velit. Egestas enim a quam magna quis vehicula.
+              </p>
+            </div>
+
+            {/* Contact Info Grid */}
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Email */}
+              <motion.div
+                className="space-y-2"
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-center gap-2 text-white/80">
+                  <Mail className="w-5 h-5" />
+                  <span className="font-semibold">Email</span>
+                </div>
+                <a 
+                  href="mailto:info@clarencegroup.com"
+                  className="block text-white/90 hover:text-teal-300 transition-colors text-sm md:text-base"
+                >
+                  info@clarencegroup.com
+                </a>
+              </motion.div>
+
+              {/* Location */}
+              <motion.div
+                className="space-y-2"
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-center gap-2 text-white/80">
+                  <MapPin className="w-5 h-5" />
+                  <span className="font-semibold">Location</span>
+                </div>
+                <p className="text-white/90 text-sm md:text-base">
+                  Lorem ipsum dolor street, Lagos Nigeria
+                </p>
+              </motion.div>
+
+              {/* Phone Number */}
+              <motion.div
+                className="space-y-2 md:col-span-2"
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-center gap-2 text-white/80">
+                  <Phone className="w-5 h-5" />
+                  <span className="font-semibold">Phone number</span>
+                </div>
+                <a 
+                  href="tel:+2348130402039"
+                  className="block text-white/90 hover:text-teal-300 transition-colors text-sm md:text-base"
+                >
+                  (234) 81 3040 - 2039
+                </a>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
 
       <Footer />
     </div>

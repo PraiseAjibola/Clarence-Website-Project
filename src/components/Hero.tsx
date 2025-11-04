@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="hero min-h-[75vh] flex flex-col items-center px-8 pt-12 pb-16 text-center relative z-[-2]">
+    <section className="hero min-h-[75vh] flex flex-col items-center px-8 pt-[120px] pb-16 lg:pt-[200px] text-center relative z-[-2]">
       <h1 className="mb-8 max-w-[840px] font-raleway font-bold text-[40px] md:text-[60px] leading-[1.2] tracking-normal">
         Investing in ideas that shape the future
       </h1>
@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
         </Link>
       </div>
-      <div className="hidden md:flex decorative-shape absolute top-[22rem] right-[30%] w-[30vw] max-[1024px]:right-[25%] max-w-[450px] h-auto opacity-50 -z-10">
+      <div className="hidden lg:flex decorative-shape absolute top-[30rem] right-[30%] w-[30vw] max-[1024px]:right-[25%] max-w-[450px] h-auto opacity-50 -z-10">
         <img src="/Images/HeroSectionImage.png" alt="" className="w-full h-full" />
       </div>
     </section>

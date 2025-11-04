@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 
 const Founder: React.FC = () => {
   return (
-    <div className="bg-black text-white font-['Raleway'] overflow-x-hidden">
+    <div className="bg-black text-white lg:pt-[100px] pt-[100px] font-['Raleway'] overflow-x-hidden">
       {/* Header */}
       {/* <header className="flex justify-between items-center py-8 px-[8%] bg-black">
         <div className="logo">
