@@ -99,8 +99,8 @@ const About = () => {
         </div>
         <div className="stats grid grid-cols-2 gap-12 font-[Raleway]">
           <StatItem target={10} label="Companies" />
-          <StatItem target={5} label="Team Members" />
-          <StatItem target={50} label="Capital Investments" hasM />
+          {/* <StatItem target={5} label="Team Members" /> */}
+          {/* <StatItem target={50} label="Capital Investments" hasM /> */}
           <StatItem target={10} label="Years" />
         </div>
       </div>
