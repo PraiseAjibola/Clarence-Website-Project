@@ -526,8 +526,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-5xl mx-auto">
             {[
               { num: "10+", label: "Portfolio Companies" },
-              { num: "$50M+", label: "Capital Deployed" },
-              { num: "5+", label: "Core Sectors" },
+              // { num: "$50M+", label: "Capital Deployed" },
+              // { num: "5+", label: "Core Sectors" },
               { num: "10+", label: "Years of Excellence" },
             ].map((item, i) => (
               <motion.div
