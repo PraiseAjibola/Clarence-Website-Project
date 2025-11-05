@@ -65,9 +65,9 @@ const DealoEnergy = () => {
               isVisible ? "animate-fade-in" : "opacity-0"
             }`}
           >
-            <div className="w-16 h-16 lg:w-20 lg:h-20  flex items-center justify-center backdrop-blur-sm">
+            <div className="w-14 h-14 lg:w-16 lg:h-12  flex items-center justify-center backdrop-blur-sm">
               <img
-                className="rounded-full lg:h-[80px] h-[70px] w-[80px] lg:w-24"
+                className="rounded-full lg:h-[65px] h-[60px] w-[60px] lg:w-24"
                 src="/Images/Card9.jpg"
                 alt=""
               />

@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Link } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 export default function AboutPage() {
   const coreValues = [
@@ -104,7 +105,8 @@ export default function AboutPage() {
               whileHover={{ x: 5 }}
               transition={{ duration: 0.3 }}
             >
-              <span className="text-base md:text-lg">Get in Touch</span>
+              <Link to ="/contact">
+              <span className="text-base md:text-lg">Get in Touch</span></Link>
               <svg 
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
                 fill="none" 
@@ -188,7 +190,7 @@ export default function AboutPage() {
             >
               <div className="order-2 md:order-1">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <img src="/Images/Vector 2.png" alt="" />
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     Our Mission
                   </h2>
@@ -218,7 +220,7 @@ export default function AboutPage() {
             >
               <div className="order-2">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                   <img src="/Images/Vector 2.png" alt="" />
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     Our Vision
                   </h2>
@@ -251,7 +253,7 @@ export default function AboutPage() {
         >
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <img src="/Images/Vector 2.png" alt="" />
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                 Our Story Behind the Firm
               </h2>
