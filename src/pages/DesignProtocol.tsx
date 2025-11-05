@@ -68,7 +68,7 @@ const DesignProtocolPage = () => {
             <div className="w-16 h-16 lg:w-20 lg:h-20  flex items-center justify-center backdrop-blur-sm">
               <img
                 className="rounded-full lg:h-[80px] h-[70px] w-[80px] lg:w-24"
-                src="/Images/Card2.jpg"
+                src="/Images/dpupdated-logo2.jpg"
                 alt=""
               />
             </div>

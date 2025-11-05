@@ -26,7 +26,7 @@ const Hero = () => {
         </Link>
       </div>
       <div className="hidden lg:flex decorative-shape absolute top-[30rem] right-[30%] w-[30vw] max-[1024px]:right-[25%] max-w-[450px] h-auto opacity-50 -z-10 pointer-events-none">
-        <img src="/Images/HeroSectionImage.png" alt="" className="w-full h-full" />
+        <img src="/Images/HeroSectionImage.png" alt="" className="w-[500px] h-[400px]" />
       </div>
     </section>
   );

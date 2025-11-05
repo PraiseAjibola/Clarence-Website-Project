@@ -46,7 +46,7 @@ const cardData: ICardData[] = [
       {
         title: "Dealo Energy Limited",
         year: "2009",
-        imageUrl: "/Images/Card2.jpg",
+        imageUrl: "/Images/dpupdated-logo2.jpg",
         imageAlt: "Dealo Energy",
         imageClass: "ligt",
         link: "/dealo-energy",

@@ -240,10 +240,10 @@ const ClarenceGate = () => {
               </div>
 
               {/* Company Image Card */}
-              <div className="w-54 h-28 sm:w-56 sm:h-36 md:w-[350px] md:h-[180px] rounded-xl flex items-center justify-center bg-orange-500 overflow-hidden shadow-md">
+              <div className="w-[200px] h-[200px] sm:w-56 sm:h-36 md:w-[350px] md:h-[180px] rounded-xl flex items-center justify-center bg-orange-500 overflow-hidden shadow-md">
                 <img
-                  className="w-full h-full object-cover rounded-xl"
-                  src="/Images/Card2.jpg"
+                  className="w-full h-full object-conyain rounded-xl"
+                  src="/Images/dpupdated-logo2.jpg"
                   alt="Clarence Gate"
                 />
               </div>
