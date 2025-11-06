@@ -90,8 +90,7 @@ const BLimited = () => {
           >
             <h3 className="text-lg font-semibold mb-3">About</h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Sed molestie justo lectus
-              elementum turpis nunc donec ullamcorper.
+              20B Limited was incorporated on the 18th Of February 2019. It is a trading company specialising in Cement & Fertilizer products. 20B was appointed as a major Distributor of Dangote Cement as of the year 2020. The Company is located at No. 20b, Adeyemi Lawson Road, Ikoyi, Lagos. 
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
               <div>
@@ -131,15 +130,9 @@ const BLimited = () => {
 
           <div className="lg:w-2/3 space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Eget nunc ullamcorper
-              mauris sit vitae in lectus eget ac. Diam sit cursus pellentesque
-              rutila habitasse pharetra accumsan odio. Sodales in odio lectus.
-              Neque quis proin at netus. Venenatis diam sed vestibulum
-              pellentesque in netus sagittis eget arcu. Feugiat arcu diam
-              commodo sagittis ultricied diam. Id rutile placerat et viverra
-              pretium sit et massa magna.
+              20B Limited is a dynamic trading company specializing in cement and fertilizer products. Appointed a major Dangote Cement distributor in 2020, the company has built a solid reputation for reliability and excellence. 20B Limited remains committed to delivering quality products and strengthening its presence in Nigeria’s building and agricultural sectors.
             </p>
-            <p>
+            {/* <p>
               At lorem ipsum ac magna. Quis cursus sem nibh pulvinar mollis sed
               arcu faucibus pellentesque. Dui sagittis odio mauris urna blandit
               proin vitass etiam viverra. Tristique tellus nisl ullamcorper
@@ -147,7 +140,7 @@ const BLimited = () => {
               et nibh integer. Duis sed in arcu. Vel eget eros sit aliquismeu
               semper sit in purus ultricies. Facilisi tellus imperdiet dui
               posuere.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

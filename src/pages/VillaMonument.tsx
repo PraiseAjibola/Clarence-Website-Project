@@ -90,9 +90,8 @@ const VillaMonument = () => {
           >
             <h3 className="text-lg font-semibold mb-3">About</h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Sed molestie justo lectus
-              elementum turpis nunc donec ullamcorper.
-            </p>
+              Our hotel features a purpose built conference room, fitness center, private garden terrace and an exclusive lounge for guests to relax and unwind, while enjoying our selection of drinks and canapés.
+              </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
               <div>
                 <p className="text-xs text-muted-foreground mb-1">Category</p>
@@ -131,15 +130,9 @@ const VillaMonument = () => {
 
           <div className="lg:w-2/3 space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Eget nunc ullamcorper
-              mauris sit vitae in lectus eget ac. Diam sit cursus pellentesque
-              rutila habitasse pharetra accumsan odio. Sodales in odio lectus.
-              Neque quis proin at netus. Venenatis diam sed vestibulum
-              pellentesque in netus sagittis eget arcu. Feugiat arcu diam
-              commodo sagittis ultricied diam. Id rutile placerat et viverra
-              pretium sit et massa magna.
+              Villa Monument Hotel provides luxury and comfort, drawing inspiration from culture & traditions across the World. Enjoy our grand themed rooms, be pampered at the Oríkì Spa, dine like royalty at the Gossip Kitchen & Bar, and relax at the Garden Terrace, all with one booking. 
             </p>
-            <p>
+            {/* <p>
               At lorem ipsum ac magna. Quis cursus sem nibh pulvinar mollis sed
               arcu faucibus pellentesque. Dui sagittis odio mauris urna blandit
               proin vitass etiam viverra. Tristique tellus nisl ullamcorper
@@ -147,7 +140,7 @@ const VillaMonument = () => {
               et nibh integer. Duis sed in arcu. Vel eget eros sit aliquismeu
               semper sit in purus ultricies. Facilisi tellus imperdiet dui
               posuere.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

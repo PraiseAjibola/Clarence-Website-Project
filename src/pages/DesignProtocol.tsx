@@ -90,8 +90,7 @@ const DesignProtocolPage = () => {
           >
             <h3 className="text-lg font-semibold mb-3">About</h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Sed molestie justo lectus
-              elementum turpis nunc donec ullamcorper.
+             Design Protocol Nigeria Limited is a leading indigenous real estate and construction firm specializing in sustainable property development and delivering full-service solutions. With a dynamic and ambitious team at the helm, we are committed to transforming the urban landscape with innovation and excellence.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
               <div>
@@ -131,22 +130,10 @@ const DesignProtocolPage = () => {
 
           <div className="lg:w-2/3 space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Eget nunc ullamcorper
-              mauris sit vitae in lectus eget ac. Diam sit cursus pellentesque
-              rutila habitasse pharetra accumsan odio. Sodales in odio lectus.
-              Neque quis proin at netus. Venenatis diam sed vestibulum
-              pellentesque in netus sagittis eget arcu. Feugiat arcu diam
-              commodo sagittis ultricied diam. Id rutile placerat et viverra
-              pretium sit et massa magna.
+              At Design Protocol, we offer a comprehensive range of services tailored to meet the diverse needs of our clients. Our expertise spans across property development, construction management, architectural design, and sustainable solutions.
             </p>
             <p>
-              At lorem ipsum ac magna. Quis cursus sem nibh pulvinar mollis sed
-              arcu faucibus pellentesque. Dui sagittis odio mauris urna blandit
-              proin vitass etiam viverra. Tristique tellus nisl ullamcorper
-              placerat seniat vitae integer. Morbi sit tincidunt faucibus vitass
-              et nibh integer. Duis sed in arcu. Vel eget eros sit aliquismeu
-              semper sit in purus ultricies. Facilisi tellus imperdiet dui
-              posuere.
+              From concept to completion, we ensure every project is executed with precision and a commitment to environmental responsibility.
             </p>
           </div>
         </div>
@@ -224,7 +211,7 @@ const DesignProtocolPage = () => {
                 >
                   <ArrowRightLeftIcon className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   <span className="text-sm sm:text-base font-medium">
-                    Previous
+                    Previous  
                   </span>
                 </Button>
               </Link>

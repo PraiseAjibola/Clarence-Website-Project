@@ -90,8 +90,7 @@ const RestaurantLounge = () => {
           >
             <h3 className="text-lg font-semibold mb-3">About</h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Sed molestie justo lectus
-              elementum turpis nunc donec ullamcorper.
+              The 355 Group aims to cater to discerning individuals who are either looking for a nostalgic experience or yearning to try something different. A great meal experience is memorable and at 355 we use the best ingredients, provide outstanding customer service, and aim for customers to have a similar fine dining experience as one at a top restaurant in London, Paris, or New York
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
               <div>
@@ -131,22 +130,15 @@ const RestaurantLounge = () => {
 
           <div className="lg:w-2/3 space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Eget nunc ullamcorper
-              mauris sit vitae in lectus eget ac. Diam sit cursus pellentesque
-              rutila habitasse pharetra accumsan odio. Sodales in odio lectus.
-              Neque quis proin at netus. Venenatis diam sed vestibulum
-              pellentesque in netus sagittis eget arcu. Feugiat arcu diam
-              commodo sagittis ultricied diam. Id rutile placerat et viverra
-              pretium sit et massa magna.
+              
+The 355 Group was founded in December 2013 with the launch of 355 Restaurant & Lounge in the heart of Victoria Island, Lagos. Since its inception, we have received positive reviews for exceptional quality of food and customer excellence.
+
             </p>
             <p>
-              At lorem ipsum ac magna. Quis cursus sem nibh pulvinar mollis sed
-              arcu faucibus pellentesque. Dui sagittis odio mauris urna blandit
-              proin vitass etiam viverra. Tristique tellus nisl ullamcorper
-              placerat seniat vitae integer. Morbi sit tincidunt faucibus vitass
-              et nibh integer. Duis sed in arcu. Vel eget eros sit aliquismeu
-              semper sit in purus ultricies. Facilisi tellus imperdiet dui
-              posuere.
+              Two years later, the second location, the 355 Steakhouse & Lounge, was launched in the heart of Abuja. Since then, the restaurant has extended to other parts of Nigeria, keeping the original soul of the brand. 
+
+The team at 355 has plans to expand to various locations throughout Nigeria and West Africa. Expect 355 Restaurant & Lounge opening in Accra in the near future.
+
             </p>
           </div>
         </div>

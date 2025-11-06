@@ -90,8 +90,7 @@ const DealoGlobalServices = () => {
           >
             <h3 className="text-lg font-semibold mb-3">About</h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Sed molestie justo lectus
-              elementum turpis nunc donec ullamcorper.
+            Dealo Global Services Limited was incorporated on the 7th of October 2020 to carry on the business of an investment company and to acquire, purchase, develop, hold and own landed properties or real estate. 
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
               <div>
@@ -131,15 +130,11 @@ const DealoGlobalServices = () => {
 
           <div className="lg:w-2/3 space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Eget nunc ullamcorper
-              mauris sit vitae in lectus eget ac. Diam sit cursus pellentesque
-              rutila habitasse pharetra accumsan odio. Sodales in odio lectus.
-              Neque quis proin at netus. Venenatis diam sed vestibulum
-              pellentesque in netus sagittis eget arcu. Feugiat arcu diam
-              commodo sagittis ultricied diam. Id rutile placerat et viverra
-              pretium sit et massa magna.
+            
+Dealo Global Services Limited is an investment company focused on acquiring, developing, and managing real estate assets. The company is dedicated to creating long-term value through strategic investments in landed properties, combining sound financial insight with a commitment to sustainable growth and excellence in property development.
+
             </p>
-            <p>
+            {/* <p>
               At lorem ipsum ac magna. Quis cursus sem nibh pulvinar mollis sed
               arcu faucibus pellentesque. Dui sagittis odio mauris urna blandit
               proin vitass etiam viverra. Tristique tellus nisl ullamcorper
@@ -147,7 +142,7 @@ const DealoGlobalServices = () => {
               et nibh integer. Duis sed in arcu. Vel eget eros sit aliquismeu
               semper sit in purus ultricies. Facilisi tellus imperdiet dui
               posuere.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

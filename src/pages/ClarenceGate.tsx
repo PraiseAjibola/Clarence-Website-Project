@@ -90,8 +90,7 @@ const ClarenceGate = () => {
           >
             <h3 className="text-lg font-semibold mb-3">About</h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Sed molestie justo lectus
-              elementum turpis nunc donec ullamcorper.
+              Clarence Gate Investment Limited was incorporated on the 12th of January 2018 as a full-service sustainable property development and construction company. It also provides a real estate operating platform for high quality residential, commercial and mixed-use development opportunities.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
               <div>
@@ -131,22 +130,11 @@ const ClarenceGate = () => {
 
           <div className="lg:w-2/3 space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Eget nunc ullamcorper
-              mauris sit vitae in lectus eget ac. Diam sit cursus pellentesque
-              rutila habitasse pharetra accumsan odio. Sodales in odio lectus.
-              Neque quis proin at netus. Venenatis diam sed vestibulum
-              pellentesque in netus sagittis eget arcu. Feugiat arcu diam
-              commodo sagittis ultricied diam. Id rutile placerat et viverra
-              pretium sit et massa magna.
+             The company provides a robust real estate platform for high-quality residential, commercial, and mixed-use developments.Clarence Gate Investment Limited is a full-service property development and construction company committed to sustainability and excellence. 
             </p>
             <p>
-              At lorem ipsum ac magna. Quis cursus sem nibh pulvinar mollis sed
-              arcu faucibus pellentesque. Dui sagittis odio mauris urna blandit
-              proin vitass etiam viverra. Tristique tellus nisl ullamcorper
-              placerat seniat vitae integer. Morbi sit tincidunt faucibus vitass
-              et nibh integer. Duis sed in arcu. Vel eget eros sit aliquismeu
-              semper sit in purus ultricies. Facilisi tellus imperdiet dui
-              posuere.
+               With a focus on innovation, quality, and long-term value creation, Clarence Gate Investment Limited continues to shape modern living and working spaces across Nigeria’s real estate landscape.
+
             </p>
           </div>
         </div>

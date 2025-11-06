@@ -523,7 +523,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-4 max-w-5xl mx-auto">
             {[
               { num: "10+", label: "Portfolio Companies" },
               // { num: "$50M+", label: "Capital Deployed" },
